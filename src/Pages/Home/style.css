@@ -1,0 +1,50 @@
+h1 {
+  position: absolute;
+  color: #bdc3d4;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.page_detail {
+  background: linear-gradient(0deg, #15191e 0%, #ffffff00 100%);
+  position: relative;
+  width: 100%;
+  height: 150px;
+  top: -250px;
+}
+.page_more_detail {
+  position: relative;
+  background-color: #15191e;
+  width: 100%;
+  height: 100px;
+  top: -250px;
+}
+
+.background_image {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: calc(100%);
+  height: calc(100vh);
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.background_image img {
+  position: relative;
+  width: calc(100%);
+  height: calc(100vh);
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+#root {
+  height: 2000px;
+}

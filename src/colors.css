@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root 
+{
+
+    --ColorBack1: #061923;  
+    --ColorBack2: #0A5C5C;
+    --BackgroundColor: linear-gradient(0deg, var(--ColorBack1) 0%, var(--ColorBack2) 100%);
+    --SeparationColor: linear-gradient(90deg, #bdc3d400 0%, var(--Color10) 50%, #bdc3d400 100%);
+
+    --ColorWhiteFix: #FFFFFF;
+
+    --Color10: #BDC3D4;  
+    --Color20: #212832;
+    --Color21: #272D35; 
+    --Color22: #2E3844;
+    --Color25: #555F6D;
+    --Color27: #545865;
+    --Color30: #15191E;  
+    --Color35: #1B212B;
+    --Color40: #208196;
+    --Color50: #347A7A;  
+    --Color60: #2E746B;  
+    --Color70: #0A5C5C;
+    --Color75: #0F8383;
+    --Color80: #061923;
+
+    --ErrorColor10: #A61111;
+
+    --Shadow: rgba(0, 0, 0, 0.5);
+    --ShadowWhite: rgba(19, 143, 143, 0.5);
+    --ShadowError: rgba(201, 44, 44, 0.5);
+
+    font-family: "Inter", sans-serif;
+
+}

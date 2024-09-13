@@ -1,0 +1,264 @@
+.Float_Bar_Frame,
+.Float_Bar_Frame_Min {
+  position: fixed;
+  z-index: 10;
+  height: 30px;
+  background-color: #15191e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid #272d35;
+  box-sizing: border-box;
+  left: 50%;
+  transition: 1s;
+  top: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  border-radius: 20px;
+}
+.Float_Bar_Frame_Min {
+  position: fixed;
+  z-index: 10;
+  height: 30px;
+  background-color: #15191e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid #272d35;
+  box-sizing: border-box;
+  left: 50%;
+  transition: 1s;
+  top: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  border-radius: 20px;
+}
+
+.Float_Bar_Frame button {
+  height: 26px;
+  border: 0;
+  padding: 0;
+  margin: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #555f6d;
+  cursor: pointer;
+  transition: all 1s, background-Color 0.2s;
+  border: 0 solid rgba(0, 0, 0, 0.4);
+}
+
+.Float_Bar_Frame label {
+  height: 26px;
+  border: 0;
+  padding: 0;
+  margin: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #555f6d;
+  cursor: pointer;
+  transition: all 1s, background-Color 0.2s;
+  border: 0 solid transparent;
+  display: flex;
+  box-sizing: border-box;
+}
+.Float_Bar_Frame input {
+  border: none;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: rgba(189, 195, 212, 0.76);
+  width: 80px;
+  margin: auto;
+  margin-right: 20px;
+  transition: all 1s, background-Color 0.2s;
+}
+.Float_Bar_Frame_Min input {
+  border: none;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: rgba(189, 195, 212, 0.76);
+  width: 0px;
+  margin: auto;
+  margin-right: 0px;
+
+  height: 26px;
+  border: 0;
+  padding: 0;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 13px;
+  color: #555f6d;
+  cursor: pointer;
+  transition: all 1s, background-Color 0.2s;
+}
+.Float_Bar_Frame input::placeholder,
+.Float_Bar_Frame_Min input::placeholder {
+  color: rgba(189, 195, 212, 0.5);
+}
+.Float_Bar_Frame label input:focus-visible {
+  outline-style: none;
+}
+.Float_Bar_Frame label:has(input:focus-visible) {
+  outline-style: none;
+  background-color: #0a5c5c;
+  border: 3px solid #0a5c5c;
+}
+
+.Float_Bar_Frame_Min label:has(input:focus-visible) {
+  background-color: #0a5c5c;
+  border: 3px solid #0a5c5c;
+  width: 100px;
+}
+.Float_Bar_Frame_Min label input:focus-visible {
+  outline-style: none;
+  width: 80px;
+  color: rgba(189, 195, 212, 0.76);
+}
+
+.Float_Bar_Frame_Min label:hover {
+  background-color: #0a5c5c;
+  border: 3px solid #0a5c5c;
+  transition: all 0.5s, border 0.2s;
+  width: 100px;
+}
+.Float_Bar_Frame_Min label:hover input {
+  transition: all 0.5s, border 0.2s;
+  margin: auto;
+  width: 80px;
+  color: rgba(189, 195, 212, 0.76);
+}
+
+.Float_Bar_Frame label:hover {
+  background-color: #0a5c5c;
+  border: 3px solid #0a5c5c;
+  transition: border 0.2s;
+}
+.Float_Bar_Frame label img {
+  margin: auto;
+  margin-left: 20px;
+  margin-right: 10px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.Float_Bar_Frame_Min label img {
+  margin: auto;
+  margin-left: 4px;
+  margin-right: 20px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.Float_Bar_Frame_Min label {
+  height: 26px;
+  border: 0;
+  padding: 0;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #555f6d;
+  cursor: pointer;
+  transition: all 1s, background-Color 0.2s;
+  border: 0 solid rgba(0, 0, 0, 0.4);
+
+  margin: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 28px;
+  transition: all 0.5s, width 1s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.Float_Bar_Frame button:hover,
+.Float_Bar_Frame_Min button:hover {
+  background-color: #0a5c5c;
+  border: 3px solid #0a5c5c;
+  transition: border 0.2s;
+}
+.Float_Bar_Frame button:focus-visible,
+.Float_Bar_Frame_Min button:focus-visible {
+  outline-style: none;
+  border: 2px solid #3b4853;
+}
+.Float_Bar_Frame button div {
+  margin: 0;
+  transition: all 0.5s, width 1s;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.Float_Bar_Frame_Min button div {
+  margin: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 20px;
+  transition: all 0.5s, width 1s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.Float_Bar_Frame button div img,
+.Float_Bar_Frame_Min button div img {
+  margin-right: 10px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.Float_Bar_Frame button div p,
+.Float_Bar_Frame_Min button div p {
+  margin: auto;
+  cursor: pointer;
+  transition: 0.2s;
+  color: rgba(189, 195, 212, 0.5);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+.Float_Bar_Frame .Float_bar_Logo {
+  margin-left: 0px;
+  margin-right: 0px;
+  transition: 1s;
+}
+
+.Float_Bar_Frame button:first-child,
+.Float_Bar_Frame_Min button:first-child {
+  margin-left: 0;
+}
+.Float_Bar_Frame button:last-child,
+.Float_Bar_Frame_Min button:last-child {
+  margin-right: 0;
+}
+
+.Float_Bar_Frame_Min .Float_bar_Logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 1s;
+}
+.Float_Bar_Frame_Min button {
+  height: 26px;
+  border: 0;
+  padding: 0;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #555f6d;
+  cursor: pointer;
+  transition: all 1s, background-Color 0.2s;
+  border: 0 solid rgba(0, 0, 0, 0.4);
+}
+.Float_Bar_Frame_Min button:hover div {
+  transition: 0.5s;
+  width: 100px;
+}

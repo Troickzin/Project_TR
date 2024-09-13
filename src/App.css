@@ -1,0 +1,8 @@
+body{
+  background: #15191E;
+  color: var(--ColorWhiteFix);
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,147 @@
+.Signin_Frame{
+    position: absolute;
+    z-index: 1;
+    width: 315px;
+    background-color: var(--Color30); border: 4px solid var(--Color21); border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    left: 80px;
+    top: 50vh;
+    transform: translateY(-50%);
+    transition: transform 1s ease-in-out;
+}
+
+.Signin_Logo{
+    position: absolute;
+    background-color: var(--Color21);
+    width: 63px; height: 63px;
+    border-radius: 20px 0px 45px 0px ;
+    display: grid;
+    top: -4px;
+    left: -4px;
+    transition: 0.5s ease-in-out;
+}.Signin_Logo img{
+    margin: 9px;
+}.Signin_Frame h1, .Signin_Frame_Erro h1{
+    position: relative;
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--Color10);
+    margin: 0px; margin-top: 30px; margin-bottom: 15px;
+    height: 40px;
+}.Signin_Separation{
+    width: 273px; height: 4px;
+    background: var(--SeparationColor);
+    margin: auto; margin-bottom: 24px;
+}
+
+.Signin_Input{
+    width: 274px; height: 45px;
+    border: none;
+    border-radius: 15px;
+    margin: 12px;
+    background-color: var(--Color20);
+    outline-style: none;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: var(--Color10);
+    transition: 0.5s, border 0s;
+}.Signin_Input::placeholder{
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: var(--Color25);
+}.Signin_Input:focus{
+    transform: scale(1.02);
+    background-color: var(--Color22);
+    margin-bottom: 20px; margin-top: 20px;
+}.Signin_Input:nth-child(2){
+    margin-bottom: 34px; 
+}
+
+.Signin_Button{
+    width: 213px; height: 48px;
+    margin: auto;
+    background-color: var(--Color70);
+    border: none;
+    border-radius: 48px;
+    color: var(--Color10);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 15px; margin-top: 60px;
+    transition: 0.2s;
+    cursor: pointer;
+    transform: scale(1);
+}.Signin_Button:hover{
+    cursor: pointer;
+    background-color: var(--Color75);
+    transform: scale(1.02);
+}.Signin_Button:disabled{
+    width: 213px; height: 48px;
+    margin: auto;
+    background-color: var(--Color35);
+    border: none;
+    border-radius: 48px;
+    color: var(--Color27);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 15px; margin-top: 60px;
+    transition: 0.2s;
+    cursor: default;
+    transform: scale(0.95);
+}
+
+.Signin_Frame_Erro{
+    position: absolute;
+    z-index: 1;
+    width: 315px;
+    background-color: var(--Color30); border: 4px solid var(--Color21); border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    left: 80px;
+    top: 50vh;
+    transform: translateY(-50%);
+    transition: 0.5s, transform 1s ease-in-out;
+    animation: Erro_Frame 0.5s 4;
+}.Signin_Frame_Erro .Signin_Logo{
+    position: absolute;
+    background-color: var(--Color21);
+    width: 63px; height: 63px;
+    border-radius: 20px 0px 45px 0px ;
+    display: grid;
+    top: -4px;
+    left: -4px;
+    transition: 0.5s ease-in-out;
+    animation: Erro_Logo_Frame 0.5s 4;
+}.SignIn_Error_Text{
+    color: #962424;
+}
+
+.SIOff{
+    transform: translateY(-50%) translateX(-500px);
+}
+
+p{
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #555F6D;
+    cursor: default;
+}
+p span{
+    color: #8691A0;
+    cursor: pointer;
+}
+
+
+@keyframes Erro_Frame {
+    
+    0%{}
+    50%{border: 4px solid hwb(0 14% 41%);}
+    100%{}
+
+}@keyframes Erro_Logo_Frame {
+    
+    0%{}
+    50%{background-color: #962424;}
+    100%{}
+
+}
