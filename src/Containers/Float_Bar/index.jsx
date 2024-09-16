@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Float_Clockbar from "./Clock";
-// import { Home, Shop, Search, Account } from "./Functions";
+import { HomeEv, ShopEv, AccountEv } from "./Functions";
 
 function float_bar(el) {
   useEffect(() => {
@@ -12,6 +12,7 @@ function float_bar(el) {
       scroll(window.scrollY);
     });
   });
+
   function AddElements(elements) {
     const fb = document.getElementById("Float_Bar");
     const cb = document.getElementById("Float_ClockBar");
@@ -31,22 +32,22 @@ function float_bar(el) {
         img.src = "src/assets/" + elements[i][0] + "_Icon.png";
         p.innerText = elements[i][0];
 
+        but.addEventListener("click", (e) => {
+          if (e.target.className == "Home") {
+            HomeEv();
+          } else if (e.target.className == "Shop") {
+            ShopEv();
+          } else if (e.target.className == "Account") {
+            AccountEv();
+          }
+        });
+
         if (elements[i][1] == "Button") {
           but.appendChild(div);
           div.appendChild(img);
           but.className = elements[i][0];
           fb.appendChild(but);
           div.appendChild(p);
-
-          but.addEventListener("click", (e) => {
-            // if (e.target.className == "Home") {
-            //   Home();
-            // } else if (e.target.className == "Shop") {
-            //   Shop();
-            // } else if (e.target.className == "Account") {
-            //   Account();
-            // }
-          });
         } else if (elements[i][1] == "Input") {
           lab.appendChild(img);
           lab.appendChild(inp);

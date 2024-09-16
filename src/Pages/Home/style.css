@@ -42,7 +42,7 @@ h1 {
   width: calc(100%);
   height: calc(100vh);
   object-fit: cover;
-  filter: brightness(0.8);
+  image-rendering: pixelated;
 }
 
 #root {

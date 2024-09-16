@@ -23,7 +23,6 @@ function Home() {
           ["Account", "Button"],
         ]}
       />
-      <h1 className="Home_Page_h1">HOME PAGE</h1>
       <div className="background_image">
         <img src="src/assets/background.jpg" draggable="false" />
         <div className="page_detail"></div>

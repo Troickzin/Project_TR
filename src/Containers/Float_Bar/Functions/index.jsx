@@ -1,20 +1,15 @@
-import React from "react";
-import { useNavigateA } from "react-router-dom";
-const navigate = useNavigateA();
-
-export function Home() {
+export function HomeEv() {
   console.log("Home Click");
 }
 
-export function Shop() {
+export function ShopEv() {
   console.log("Shop Click");
-  navigate("/Shop");
 }
 
-export function Search() {
+export function SearchEv() {
   console.log("Search Click");
 }
 
-export function Account() {
+export function AccountEv() {
   console.log("Account Click");
 }
