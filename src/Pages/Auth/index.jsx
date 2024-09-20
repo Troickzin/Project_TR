@@ -1,21 +1,17 @@
-import { useState } from 'react'
-import Api from '../../Services/Api'
-import SignUp_Frame from '../../Containers/SignUp_Frame'
-import SignIn_Frame from '../../Containers/SignIn_Frame'
-import './style.css'
-
+import "./style.css";
+import SignIn_Frame from "./SignIn";
+import SignUp_Frame from "./SignUp";
 function Auth() {
-
-  document.title = "Delta Sign In";
+  document.title = "TKS Auth";
 
   return (
     <>
-      <img className='sbe' src="src/assets/signin_background_effect.png" draggable="false"/>
-      <div className='Effect'></div>
-      <SignIn_Frame />
-      <SignUp_Frame />
+      <nav className="Auth_Navbar">
+        <img src="src/assets/Logo/Logo40px.png" className="Auth_Icon" />
+        <SignIn_Frame />
+      </nav>
     </>
-  )
+  );
 }
 
-export default Auth
+export default Auth;

@@ -1,33 +1,26 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./style.css";
+import Background_One from "../../Containers/Background/Background_One";
 import Float_Bar from "../../Containers/Float_Bar";
+import Float_Account from "../../Containers/Float_Account";
+import Float_Social from "../../Containers/Float_Social";
+import Api from "../../Services/Api";
+import "./style.css";
 
 function Home() {
-  const UserLS = localStorage.getItem("User/Login");
-  const navigate = useNavigate();
+  document.title = "TKS";
 
-  useEffect(() => {
-    // if (UserLS == null) {
-    //   navigate("/Auth");
-    // }
-  });
+  async function getUser(token) {
+    const user = await Api.post("/User/GetUser", { token: token });
+    console.log(user.data.username);
+  }
+
+  getUser(localStorage.getItem("LoginToken"));
 
   return (
     <>
-      <Float_Bar
-        elements={[
-          ["Home", "Button"],
-          ["Shop", "Button"],
-          ["Search", "Input"],
-          ["Account", "Button"],
-        ]}
-      />
-      <div className="background_image">
-        <img src="src/assets/background.jpg" draggable="false" />
-        <div className="page_detail"></div>
-        <div className="page_more_detail"></div>
-      </div>
+      <Background_One />
+      <Float_Bar Type="Home" />
+      <Float_Account />
+      <Float_Social />
     </>
   );
 }

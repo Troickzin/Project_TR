@@ -1,0 +1,9 @@
+body {
+  background: var(--BgColor1);
+  color: var(--TextColor1);
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

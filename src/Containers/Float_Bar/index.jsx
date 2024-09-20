@@ -1,94 +1,50 @@
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./style.css";
-import Float_Clockbar from "./Clock";
-import { HomeEv, ShopEv, AccountEv } from "./Functions";
 
-function float_bar(el) {
-  useEffect(() => {
-    AddElements(el.elements);
+function Float_Bar({ Type }) {
+  const navigate = useNavigate();
 
-    window.addEventListener("scroll", (e) => {
-      scroll(window.scrollY);
-    });
-  });
+  /* ------ Funções de navegação ------ */
 
-  function AddElements(elements) {
-    const fb = document.getElementById("Float_Bar");
-    const cb = document.getElementById("Float_ClockBar");
+  const ShopEv = () => {
+    return navigate("/shop");
+  };
+  const HomeEv = () => {
+    return navigate("/home");
+  };
+  const AboutEv = () => {
+    return navigate("/about");
+  };
+  const SupportEv = () => {
+    return navigate("/support");
+  };
 
-    if (fb.children.length == 0) {
-      for (var i = 0; i < elements.length; i++) {
-        const but = document.createElement("button");
-        const inp = document.createElement("input");
-        const lab = document.createElement("label");
-        const div = document.createElement("div");
-        const img = document.createElement("img");
-        const p = document.createElement("p");
+  /* ------ Tipos de Navbar ------ */
 
-        div.className = elements[i][0];
-        img.className = elements[i][0];
-        p.className = elements[i][0];
-        img.src = "src/assets/" + elements[i][0] + "_Icon.png";
-        p.innerText = elements[i][0];
-
-        but.addEventListener("click", (e) => {
-          if (e.target.className == "Home") {
-            HomeEv();
-          } else if (e.target.className == "Shop") {
-            ShopEv();
-          } else if (e.target.className == "Account") {
-            AccountEv();
-          }
-        });
-
-        if (elements[i][1] == "Button") {
-          but.appendChild(div);
-          div.appendChild(img);
-          but.className = elements[i][0];
-          fb.appendChild(but);
-          div.appendChild(p);
-        } else if (elements[i][1] == "Input") {
-          lab.appendChild(img);
-          lab.appendChild(inp);
-          inp.className = elements[i][0];
-          inp.id = elements[i][0];
-          inp.name = elements[i][0];
-          fb.appendChild(lab);
-          inp.placeholder = "Search";
-        }
-
-        console.log(elements[i]);
-
-        if (i + 1 == elements.length / 2) {
-          const img = document.createElement("img");
-          fb.appendChild(img);
-          img.src = "src/assets/Logo/FloatBar_Logo.png";
-          img.className = "Float_bar_Logo";
-        }
-      }
-    }
+  if (Type === "Home") {
+    return (
+      <>
+        <nav className="Float_Navbar">
+          <button onClick={ShopEv}>Shop</button>
+          <button onClick={AboutEv}>About</button>
+          <button onClick={SupportEv}>Support</button>
+        </nav>
+      </>
+    );
+  } else if (Type === "Shop") {
+    return (
+      <>
+        <nav className="Float_Navbar">
+          <button onClick={HomeEv}>Home</button>
+          <img src="src/assets/Logo/Logo40px.png" />
+          <input type="text" placeholder="Search" />
+        </nav>
+      </>
+    );
   }
 
-  function scroll(scroll) {
-    const fb = document.getElementById("Float_Bar");
-    const fcb = document.getElementById("Float_ClockBar");
-
-    if (scroll > 0 && fb.className == "Float_Bar_Frame") {
-      fb.classList.add("Float_Bar_Frame_Min");
-      fb.classList.remove("Float_Bar_Frame");
-    } else if (scroll == 0 && fb.className == "Float_Bar_Frame_Min") {
-      fb.classList.add("Float_Bar_Frame");
-      fb.classList.remove("Float_Bar_Frame_Min");
-    }
-  }
-
-  return (
-    <>
-      <div className="Float_Bar_Frame" id="Float_Bar"></div>
-      {/* <Float_Clockbar /> */}
-    </>
-  );
+  return <></>;
 }
 
-export default float_bar;
+export default Float_Bar;

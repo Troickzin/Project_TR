@@ -1,0 +1,98 @@
+form {
+  position: absolute;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 470px;
+  height: 100%;
+}
+
+input {
+  width: 470px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border-radius: 15px;
+  background-color: var(--bgColor7);
+  box-shadow: 0px 0px 10px var(--Shadow);
+  color: var(--TextColor1);
+  box-sizing: border-box;
+  padding-left: 40px;
+  font-weight: 600;
+  transition: 0.5s;
+  border: 3px solid var(--bgColor7);
+  cursor: text;
+  transition: 0.2s;
+}
+input::placeholder {
+  color: var(--TextColor4);
+  font-weight: 600;
+}
+
+input:first-child {
+  margin-top: 270px;
+}
+
+input:required:invalid {
+  animation: Error_Border_Anim 1s linear 4;
+}
+
+.Login_Button,
+.Register_Button {
+  position: absolute;
+  width: 340px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-top: 350px;
+  margin-bottom: 15px;
+  border-radius: 48px;
+  background-color: var(--bgColor7);
+  box-shadow: 0px 0px 10px var(--Shadow);
+  color: var(--TextColor4);
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 100px;
+}
+
+.Login_Button:disabled,
+.Register_Button:disabled {
+  background-color: var(--bgColor6);
+}
+
+.Dont_Have {
+  position: absolute;
+  font-weight: 700;
+  color: var(--TextColor4);
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 60px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.Dont_Have span {
+  color: var(--TextColor5);
+  cursor: pointer;
+}
+
+@keyframes Error_Border_Anim {
+  0% {
+  }
+  30% {
+    border: 3px solid var(--TextError2);
+  }
+  100% {
+  }
+}
