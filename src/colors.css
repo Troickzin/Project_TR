@@ -1,64 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
 :root {
-  --SeparationColor: linear-gradient(
-    90deg,
-    #bdc3d400 0%,
-    var(--Color1) 50%,
-    #bdc3d400 100%
-  );
-
-  --BackEffect: linear-gradient(0deg, var(--BgColor1) 0%, #bdc3d400 100%);
-
   --White: #ffffff;
 
-  --Color1: #bdc3d4;
-  --Color2: #555f6d;
-  --Color3: #212832;
-  --Color4: #15191e;
-  --Color5: #11151a;
-  --Color6: #0a0d0f;
-  --Color7: #1e7398;
-  --Color8: #3c7587;
-  --Color9: #39b995;
+  --BgColor: rgba(18, 19, 22, 0.941);
+  --BgColor1: #181a20;
+  --BgColor2: #1d1e24;
 
-  --BgColor1: #15191e;
-  --BgColor2: #13161b;
-  --BgColor3: #11151a;
-  --BgColor4: #0a0d0f;
-  --BgColor5: #1e7398;
-  --BgColor6: #39b995;
-  --bgColor7: #212832;
+  --ButtonDisabled: #121419;
+  --ButtonCyan: #0d9da3;
 
-  --BorderColor1: #272d35;
+  --ButtonNotificationNext: #3b9e93;
+  --ButtonNotificationCancel: #893843;
 
   --TextColor1: #bdc3d4;
-  --TextColor2: #bdc3d480;
-  --TextColor3: #545865;
-  --TextColor4: #555f6d;
-  --TextColor5: #8691a0;
-  --TextColor6: #518374;
+  --TextColor2: #9ca1b0;
+  --TextColor3: #7f8494;
+  --TextColor4: #7b7f8c;
+  --TextColor5: #5a5e68;
+  --TextColor6: #3a3c43;
+  --TextColor7: #333844;
 
-  --TextError1: #844444;
-  --TextError2: #962e2e;
-  --TextError3: #d43737;
-  --TextError4: #eb3030;
+  --TextNotification: #5a5e68;
+  --TextNotificationSuccess: #35765e;
+  --TextNotificationError: #74262b;
 
-  --DiscordColor: #7289da;
-  --X_TwitterColor: #1da1f2;
-  --YoutubeColor: #ff0000;
+  --ShadowB25: #00000040;
 
-  --ErrorColor10: #a61111;
-
-  --Shadow: #00000080;
-  --ShadowWhite: #ffffff80;
-  --ShadowError: #c92c2c80;
-
-  font-family: "Inter", sans-serif;
+  font-family: "Alexandria", sans-serif;
 }
 
 input::placeholder,
 p,
-a {
-  font-family: "Inter", sans-serif;
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Alexandria", sans-serif;
 }
